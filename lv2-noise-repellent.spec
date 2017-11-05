@@ -11,7 +11,7 @@ Source0:        https://github.com/lucianodato/noise-repellent/archive/%{version
 #BuildRequires:  non-ntk-devel
 #BuildRequires:  libsndfile-devel
 #BuildRequires:  cairomm-devel
-#BuildRequires:  lv2-devel
+BuildRequires:  lv2-devel
 #BuildRequires:  cmake
 Requires:       lv2
 
