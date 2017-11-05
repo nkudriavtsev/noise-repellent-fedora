@@ -1,3 +1,5 @@
+%global pname nrepel
+
 Name:           lv2-noise-repellent
 Version:        0.1.3f
 Release:        1%{?dist}
@@ -28,7 +30,7 @@ make install DESTDIR=%{buildroot}
 
 %files
 %doc README.md LICENSE
-%{_libdir}/lv2/nrepel.lv2/*
+%{_libdir}/lv2/%{pname}.lv2/*
 
 %changelog
 * Sun Nov 05 2017 Nicholas Kudriavtsev <nkudriavtsev@gmail.com>
