@@ -19,7 +19,9 @@ Requires:       lv2
 An lv2 plug-in for broadband noise reduction.
 
 %prep
-sed -i -e  's|lib/|%{_lib}/|g'  -e 's|\-Wall|%{optflags}|g' Makefile
+%setup -q -n %{pname}-%{version}
+sed -i -e 's|lib/|%{_lib}/|g' Makefile
+sed -i -e 's|-O3|%{optflags}|' Makefile
 
 %build
 %{cmake}
