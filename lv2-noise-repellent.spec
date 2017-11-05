@@ -7,12 +7,8 @@ License:        GPLv3.0+
 URL:            https://github.com/lucianodato/noise-repellent
 Source0:        https://github.com/lucianodato/noise-repellent/archive/%{version}.tar.gz
 
-#BuildRequires:  faust
-#BuildRequires:  non-ntk-devel
-#BuildRequires:  libsndfile-devel
-#BuildRequires:  cairomm-devel
 BuildRequires:  lv2-devel
-#BuildRequires:  cmake
+BuildRequires:  fftw-devel
 Requires:       lv2
 
 %description
