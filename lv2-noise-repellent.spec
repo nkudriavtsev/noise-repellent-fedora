@@ -1,5 +1,7 @@
 %global pname nrepel
 
+%define debug_package %{nil}
+
 Name:           lv2-noise-repellent
 Version:        0.1.3f
 Release:        1%{?dist}
