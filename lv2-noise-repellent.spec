@@ -27,7 +27,7 @@ sed -i -e 's|-O3|%{optflags}|' Makefile
 make %{?_smp_mflags}
 
 %install
-mkdir -p %{buildroot}/%{_libdir}/lv2
+#mkdir -p %{buildroot}/%{_libdir}/lv2
 make install DESTDIR=%{buildroot}
 
 %files
