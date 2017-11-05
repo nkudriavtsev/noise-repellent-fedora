@@ -19,7 +19,7 @@ Requires:       lv2
 An lv2 plug-in for broadband noise reduction.
 
 %prep
-%setup -q -n %{pname}-%{version}
+%setup -q -n noise-repellent-%{version}
 sed -i -e 's|lib/|%{_lib}/|g' Makefile
 sed -i -e 's|-O3|%{optflags}|' Makefile
 
