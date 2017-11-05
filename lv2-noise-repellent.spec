@@ -24,7 +24,6 @@ sed -i -e 's|lib/|%{_lib}/|g' Makefile
 sed -i -e 's|-O3|%{optflags}|' Makefile
 
 %build
-%{cmake}
 make %{?_smp_mflags}
 
 %install
@@ -32,7 +31,7 @@ mkdir -p %{buildroot}/%{_libdir}/lv2
 make install DESTDIR=%{buildroot}
 
 %files
-%doc README.md CHANGELOG LICENSE
+%doc README.md LICENSE
 %{_libdir}/lv2/*
 
 %changelog
