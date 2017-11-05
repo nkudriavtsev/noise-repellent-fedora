@@ -12,6 +12,7 @@ Source0:        https://github.com/lucianodato/noise-repellent/archive/%{version
 BuildRequires:  lv2-devel
 BuildRequires:  fftw-devel
 Requires:       lv2
+Requires:       fftw-libs
 
 %description
 An lv2 plug-in for broadband noise reduction.
@@ -22,11 +23,11 @@ sed -i -e 's|lib/|%{_lib}/|g' Makefile
 sed -i -e 's|-O3|%{optflags}|' Makefile
 
 %build
-%make_build %{?_smp_mflags} PREFIX=%{_prefix}
+make %{?_smp_mflags} PREFIX=%{_prefix}
 
 %install
 #mkdir -p %{buildroot}/%{_libdir}/lv2
-make install DESTDIR=%{buildroot}
+make install DESTDIR=%{buildroot} PREFIX=%{_prefix}
 
 %files
 %doc README.md LICENSE
