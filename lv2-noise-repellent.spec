@@ -20,7 +20,7 @@ sed -i -e 's|lib/|%{_lib}/|g' Makefile
 sed -i -e 's|-O3|%{optflags}|' Makefile
 
 %build
-make %{?_smp_mflags}
+make %{?_smp_mflags} PREFIX=/usr
 
 %install
 #mkdir -p %{buildroot}/%{_libdir}/lv2
