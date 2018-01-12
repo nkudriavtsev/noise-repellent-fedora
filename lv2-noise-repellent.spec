@@ -3,7 +3,7 @@
 %define debug_package %{nil}
 
 Name:           lv2-noise-repellent
-Version:        0.1.3f
+Version:        0.1.4
 Release:        1%{?dist}
 Summary:        An lv2 plug-in for broadband noise reduction
 Group:          Applications/Multimedia
@@ -36,5 +36,7 @@ make install DESTDIR=%{buildroot} PREFIX=%{_prefix}
 %{_libdir}/lv2/%{pname}.lv2/*
 
 %changelog
+* Fri Jan 12 2018 Nicholas Kudriavtsev <nkudriavtsev@gmail.com>
+- Update to 0.1.4 of noise-repelent
 * Sun Nov 05 2017 Nicholas Kudriavtsev <nkudriavtsev@gmail.com>
 - Initial rpm build
